@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0.2)
+cmake_minimum_required(VERSION 3.10)
 project(OzEngine)
 
 #The Project Version Number
@@ -14,6 +14,7 @@ include_directories(
 	Dependencies/msvc-windows-x86/glew/include
 	Dependencies/msvc-windows-x86/GLFW/include
 	Dependencies/msvc-windows-x86/AL/include
+	Dependencies/spdlog/include
 )
 
 link_directories(
@@ -25,6 +26,7 @@ link_directories(
 #Add the libraries to the project
 add_library(OzEngine SHARED
 	src/OzEngine/Core/Application.cpp
+	src/OzEngine/Utilities/Log.cpp
 )
 
 set_target_properties( OzEngine

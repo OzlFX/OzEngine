@@ -4,6 +4,8 @@
 /** META defined header to include all classes to be used in the client **/
 #include "Application.h"
 #include "EntryPoint.h"
+
+#include <OzEngine/Utilities/Log.h>
 /*#include "GameObject.h"
 #include "Context.h"
 #include "Input.h"

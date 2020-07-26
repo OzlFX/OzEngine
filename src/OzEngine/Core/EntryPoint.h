@@ -5,11 +5,17 @@
 #ifdef _WINDOWS
 
 #include <memory>
+#include <OzEngine/Utilities/Log.h> //Remove when a proper implimentation is used
 
 //extern std::unique_ptr<Oz::cApplication> Oz::CreateApplication();
 
 int main(int argc, char** argv)
 {
+	//Only use as a test
+	Oz::cLog::Init();
+	Oz::cLog::GetCoreLogger()->warn("Initialised Log!");
+	Oz::cLog::GetClientLogger()->info("Welcome!");
+	//-------------------------------
 	auto Game = Oz::CreateApplication();
 	Game->Run();
 }
