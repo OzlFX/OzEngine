@@ -29,14 +29,14 @@ add_library(OzEngine SHARED
 	src/OzEngine/Utilities/Log.cpp
 )
 
-set_target_properties( OzEngine
-    PROPERTIES
-    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
-)
-
 target_compile_definitions(
 	OzEngine
 	PRIVATE -DBUILD_DLL
+)
+
+set_target_properties( OzEngine
+    PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
 )
 
 target_link_libraries(OzEngine)

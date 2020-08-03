@@ -13,8 +13,8 @@ int main(int argc, char** argv)
 {
 	//Only use as a test
 	Oz::cLog::Init();
-	Oz::cLog::GetCoreLogger()->warn("Initialised Log!");
-	Oz::cLog::GetClientLogger()->info("Welcome!");
+	OZ_CORE_WARN("Initialised Log!");
+	OZ_INFO("Welcome!");
 	//-------------------------------
 	auto Game = Oz::CreateApplication();
 	Game->Run();

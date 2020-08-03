@@ -16,10 +16,6 @@ namespace Oz
 {
 	class OZ_API cApplication
 	{
-	private:
-
-		bool m_Running;
-
 	public:
 
 		cApplication();
@@ -28,6 +24,9 @@ namespace Oz
 
 		virtual ~cApplication();
 
+	private:
+
+		bool m_Running;
 	};
 
 	std::unique_ptr<cApplication> CreateApplication(); //Define in the Client
