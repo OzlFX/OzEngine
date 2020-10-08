@@ -1,19 +1,28 @@
 #include "Application.h"
+#include <OzEngine/Utilities/Log.h>
 
 namespace Oz
 {
 	cApplication::cApplication()
 	{
-		m_Running = false;
+		m_Running = true;
+		s_Self = this;
 	}
 
 	void cApplication::Run()
 	{
-		m_Running = true;
+		OZ_CORE_WARN("Initialised Log!");
+		OZ_INFO("Welcome!");
+		m_Window = Oz::cWindow::Create<Window>();
 		while (m_Running)
 		{
 
 		}
+	}
+
+	void cApplication::Close()
+	{
+		m_Running = false;
 	}
 
 	cApplication::~cApplication()

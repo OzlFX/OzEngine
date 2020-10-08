@@ -23,7 +23,7 @@ namespace Oz
 	};
 }
 
-/* MACROS to handle logging (NOT USED) */
+/* MACROS to handle logging (NOT CURRENTLY USED) */
 //Core
 #define OZ_CORE_FATAL(...) ::Oz::cLog::GetCoreLogger()->fatal(__VA_ARGS__)
 #define OZ_CORE_ERROR(...) ::Oz::cLog::GetCoreLogger()->error(__VA_ARGS__)

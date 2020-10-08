@@ -10,8 +10,6 @@ public:
 
 	cProgram();
 
-	//void Run();
-
 	~cProgram();
 };
 

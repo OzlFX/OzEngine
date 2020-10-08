@@ -12,6 +12,8 @@
 
 #include "Core.h"
 
+#include "PlatformDetection.h"
+
 namespace Oz
 {
 	class OZ_API cApplication
@@ -20,13 +22,21 @@ namespace Oz
 
 		cApplication();
 
-		void Run();
+		std::weak_ptr<Window> GetWindow() { return m_Window; } //Get the window
+		static cApplication& GetApplication() { return *s_Self; } //Get current application instance
+
+		void Run(); //Run the application
+		void Close(); //Close the application
 
 		virtual ~cApplication();
 
 	private:
+		//Vars for the application
+		bool m_Running; //Run check
+		bool m_Minimised; //Minimised check
 
-		bool m_Running;
+		std::shared_ptr<Window> m_Window; //Window
+		static cApplication* s_Self; //Instance of the application
 	};
 
 	std::unique_ptr<cApplication> CreateApplication(); //Define in the Client

@@ -8,26 +8,33 @@
 
 namespace Oz
 {
-	struct sWindowProperties
-	{
-		std::string m_Title;
-		unsigned int m_Width;
-		unsigned int m_Height;
-
-		CreateWindow(const std::string& _Title = "Oz Engine Game",
-					 unsigned int _Width = 1280, )
-					 unsigned int _Height = 720, )
-					 {
-						
-					 }
-	};
-
-	class OZ_API cWindow
+	class cWindow
 	{
 	public:
 
-	private:
+		cWindow(const std::string& _Title,
+			uint32_t _Width,
+			uint32_t _Height, bool _Fullscreen);
 
+		virtual std::string& GetTitle() const = 0;
+		virtual uint32_t GetWidth() const = 0;
+		virtual uint32_t GetHeight() const = 0;
+
+		template <typename T, typename... A>
+		static std::unique_ptr<T> Create(A... _args)
+		{
+			return std::make_unique<T>(_args...);
+		}
+
+		virtual ~cWindow() = default;
+
+	protected:
+		
+		const std::string m_Title;
+		uint32_t m_Width;
+		uint32_t m_Height;
+		bool m_Fullscreen;
+		
 	};
 }
 

@@ -8,6 +8,8 @@
 #include <sstream>
 #include <vector>
 
+#include <OzEngine/Utilities/Log.h>
+
 #ifdef _WINDOWS
 	#include <Windows.h>
 #endif
