@@ -22,7 +22,7 @@ namespace Oz
 		uint32_t GetHeight() const { return m_Height; }
 		bool IsFullscreen() const { return m_Fullscreen; }
 
-		~cOpenGLWindow();
+		virtual ~cOpenGLWindow();
 
 	private:
 

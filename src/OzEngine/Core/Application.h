@@ -17,6 +17,7 @@
 namespace Oz
 {
 	class cWindow;
+	class cOpenGLWindow;
 
 	class OZ_API cApplication
 	{

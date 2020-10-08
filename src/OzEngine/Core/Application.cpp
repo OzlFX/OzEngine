@@ -1,5 +1,6 @@
 #include "Application.h"
 #include <OzEngine/Utilities/Log.h>
+#include <OzEngine/Core/Window/OpenGLWindow.h>
 
 namespace Oz
 {
