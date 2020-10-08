@@ -19,11 +19,12 @@ namespace Oz
 		virtual std::string& GetTitle() const = 0;
 		virtual uint32_t GetWidth() const = 0;
 		virtual uint32_t GetHeight() const = 0;
+		virtual bool IsFullscreen() const = 0;
 
 		template <typename T, typename... A>
-		static std::unique_ptr<T> Create(A... _args)
+		static std::shared_ptr<T> Create(A... _args)
 		{
-			return std::make_unique<T>(_args...);
+			return std::make_shared<T>(_args...);
 		}
 
 		virtual ~cWindow() = default;

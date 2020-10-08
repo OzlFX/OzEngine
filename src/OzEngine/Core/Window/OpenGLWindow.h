@@ -17,10 +17,10 @@ namespace Oz
 
 		void SetFullscreen(bool _Fullscreen);
 
-		std::string GetName() const { return this->m_Title; }
-		uint32_t GetWidth() const { return this->m_Width; }
-		uint32_t GetHeight() const { return this->m_Height; }
-		bool IsFullscreen() const { return this->m_Fullscreen; }
+		std::string GetName() const { return m_Title; }
+		uint32_t GetWidth() const { return m_Width; }
+		uint32_t GetHeight() const { return m_Height; }
+		bool IsFullscreen() const { return m_Fullscreen; }
 
 		~cOpenGLWindow();
 

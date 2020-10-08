@@ -16,6 +16,8 @@
 
 namespace Oz
 {
+	class cWindow;
+
 	class OZ_API cApplication
 	{
 	public:

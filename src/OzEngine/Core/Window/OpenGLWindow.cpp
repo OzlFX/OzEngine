@@ -2,9 +2,9 @@
 
 namespace Oz
 {
-	cOpenGLWindow::cOpenGLWindow(const std::string& _Title = "Oz Engine Game",
-		uint32_t _Width = 1280,
-		uint32_t _Height = 720, bool _Fullscreen = false) : cWindow(_Title, _Width, _Height, _Fullscreen)
+	cOpenGLWindow::cOpenGLWindow(const std::string& _Title,
+		uint32_t _Width,
+		uint32_t _Height, bool _Fullscreen) : cWindow(_Title, _Width, _Height, _Fullscreen)
 	{
 		//Setup GLFW
 		glfwInit();
