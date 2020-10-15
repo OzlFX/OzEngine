@@ -16,7 +16,7 @@ namespace Oz
 			uint32_t _Width,
 			uint32_t _Height, bool _Fullscreen);
 
-		virtual std::string& GetTitle() const = 0;
+		virtual std::string GetTitle() const = 0;
 		virtual uint32_t GetWidth() const = 0;
 		virtual uint32_t GetHeight() const = 0;
 		virtual bool IsFullscreen() const = 0;

@@ -17,7 +17,7 @@ namespace Oz
 
 		void SetFullscreen(bool _Fullscreen);
 
-		std::string GetName() const { return m_Title; }
+		std::string GetTitle() const { return m_Title; }
 		uint32_t GetWidth() const { return m_Width; }
 		uint32_t GetHeight() const { return m_Height; }
 		bool IsFullscreen() const { return m_Fullscreen; }

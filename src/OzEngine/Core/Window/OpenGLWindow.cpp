@@ -15,7 +15,7 @@ namespace Oz
 		SetFullscreen(_Fullscreen);
 
 		//Create GLFW Window
-		m_Window = glfwCreateWindow(GetWidth(), GetHeight(), GetName().c_str(), m_Windowed, NULL);
+		m_Window = glfwCreateWindow(GetWidth(), GetHeight(), GetTitle().c_str(), m_Windowed, NULL);
 	}
 
 	void cOpenGLWindow::SetFullscreen(bool _Fullscreen)
