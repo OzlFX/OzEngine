@@ -3,16 +3,8 @@
 #define _CAPPLICATION_H_
 
 //Includes
-#include <iostream>
-#include <memory>
-#include <list>
-#include <vector>
-
-#include <glm/glm.hpp>
-
+#include "Base.h"
 #include "Core.h"
-
-#include "PlatformDetection.h"
 
 namespace Oz
 {

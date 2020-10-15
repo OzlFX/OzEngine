@@ -1,3 +1,5 @@
+#include "Window/OpenGLWindow.h"
+
 #ifdef _WIN32
 	/* Windows x64/x86 */
 	#define OZ_PLATFORM_WINDOWS

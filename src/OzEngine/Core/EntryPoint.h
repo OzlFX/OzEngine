@@ -4,7 +4,7 @@
 
 #ifdef _WINDOWS
 
-#include <memory>
+#include <OzEngine/Core/Base.h>
 
 //extern std::unique_ptr<Oz::cApplication> Oz::CreateApplication();
 
