@@ -7,7 +7,7 @@ namespace Oz
 	cApplication::cApplication()
 	{
 		m_Running = true;
-		this->s_Self = this;
+		s_Self = this;
 	}
 
 	void cApplication::Run()
