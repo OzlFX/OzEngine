@@ -2,11 +2,14 @@
 #define _OPENGLWINDOW_H_
 
 #include "Window.h"
-#include <gl/GL.h>
-#include <GLFW/glfw3.h>
+#include "OzEngine/RenderSystem/GraphicsContext.h"
+
+struct GLFWwindow;
+struct GLFWmonitor;
 
 namespace Oz
 {
+
 	class cOpenGLWindow : public cWindow
 	{
 	public:
@@ -15,12 +18,21 @@ namespace Oz
 			uint32_t _Width = 1280,
 			uint32_t _Height = 720, bool _Fullscreen = false);
 
-		void SetFullscreen(bool _Fullscreen);
+		void OnUpdate() override;
 
-		std::string GetTitle() const { return m_Title; }
-		uint32_t GetWidth() const { return m_Width; }
-		uint32_t GetHeight() const { return m_Height; }
-		bool IsFullscreen() const { return m_Fullscreen; }
+		void SetFullscreen(bool _Fullscreen) override;
+
+		std::string GetTitle() const override { return m_Title; }
+		uint32_t GetWidth() const override { return m_Width; }
+		uint32_t GetHeight() const override { return m_Height; }
+		bool IsFullscreen() const override { return m_Fullscreen; }
+
+		//Window Attributes
+		void SetEventCallback() override { OZ_CORE_INFO("Unused currently since its not implimented"); }
+		void SetVSync(bool _Enabled) override;
+		bool IsVSync() const override;
+
+		void* GetNativeWindow() const override { return m_Window; }
 
 		virtual ~cOpenGLWindow();
 
@@ -28,6 +40,8 @@ namespace Oz
 
 		GLFWwindow* m_Window;
 		GLFWmonitor* m_Windowed;
+
+		std::unique_ptr<cGraphicsContext> m_Context;
 
 	};
 }

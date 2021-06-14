@@ -25,14 +25,14 @@ namespace Oz
 
 /* MACROS to handle logging (NOT CURRENTLY USED) */
 //Core
-#define OZ_CORE_FATAL(...) ::Oz::cLog::GetCoreLogger()->fatal(__VA_ARGS__)
+#define OZ_CORE_CRITICAL(...) ::Oz::cLog::GetCoreLogger()->critical(__VA_ARGS__)
 #define OZ_CORE_ERROR(...) ::Oz::cLog::GetCoreLogger()->error(__VA_ARGS__)
 #define OZ_CORE_WARN(...)  ::Oz::cLog::GetCoreLogger()->warn(__VA_ARGS__)
 #define OZ_CORE_INFO(...)  ::Oz::cLog::GetCoreLogger()->info(__VA_ARGS__)
 #define OZ_CORE_TRACE(...) ::Oz::cLog::GetCoreLogger()->trace(__VA_ARGS__)
 
 //Client
-#define OZ_FATAL(...) ::Oz::cLog::GetClientLogger()->fatal(__VA_ARGS__)
+#define OZ_CRITICAL(...) ::Oz::cLog::GetClientLogger()->critical(__VA_ARGS__)
 #define OZ_ERROR(...) ::Oz::cLog::GetClientLogger()->error(__VA_ARGS__)
 #define OZ_WARN(...)  ::Oz::cLog::GetClientLogger()->warn(__VA_ARGS__)
 #define OZ_INFO(...)  ::Oz::cLog::GetClientLogger()->info(__VA_ARGS__)

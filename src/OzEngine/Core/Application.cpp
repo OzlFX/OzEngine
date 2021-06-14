@@ -4,6 +4,8 @@
 
 namespace Oz
 {
+	cApplication* cApplication::s_Self = nullptr;
+
 	cApplication::cApplication()
 	{
 		m_Running = true;
@@ -17,7 +19,7 @@ namespace Oz
 		m_Window = Oz::cWindow::Create<Window>();
 		while (m_Running)
 		{
-
+			m_Window->OnUpdate();
 		}
 	}
 

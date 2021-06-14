@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.15)
 project(OzEngine)
 
 #The Project Version Number
-set (Oz_Engine_VERSION_MAJOR 1)
-set (Oz_Engine_VERSION_MINOR 0)
+SET(Oz_Engine_VERSION_MAJOR 1)
+SET(Oz_Engine_VERSION_MINOR 0)
 
 include_directories(
 	src
@@ -18,7 +18,7 @@ include_directories(
 )
 
 link_directories(
-	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/glew/lib/Release/x64
+	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/glew/lib/Release/Win32
 	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/GLFW/lib
 	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/AL/lib
 )
@@ -33,7 +33,16 @@ add_library(OzEngine SHARED
 	src/OzEngine/Core/Window/Window.cpp
 	src/OzEngine/Core/Window/OpenGLWindow.h
 	src/OzEngine/Core/Window/OpenGLWindow.cpp
+	src/OzEngine/RenderSystem/GraphicsContext.cpp
+	src/OzEngine/RenderSystem/OpenGL/OpenGLContext.cpp
 )
+
+#set(CMAKE_CXX_FLAGS_RELEASE "/MT")
+#set(CMAKE_CXX_FLAGS_DEBUG "/MTd")
+
+#set_property(TARGET OzEngine PROPERTY
+#	MSVC_RUNTIME_LIBRARY "MultiThreaded"
+#)
 
 target_compile_definitions(
 	OzEngine
@@ -43,9 +52,10 @@ target_compile_definitions(
 set_target_properties( OzEngine
     PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
 )
 
-target_link_libraries(OzEngine opengl32 OpenAL32 glew32)
+target_link_libraries(OzEngine OpenAL32 glfw3 glew32)
 
 #Add main executable
 add_executable(Game
