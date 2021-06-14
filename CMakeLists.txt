@@ -12,14 +12,14 @@ include_directories(
 	Dependencies/stb_image
 	Dependencies/stb_vorbis
 	Dependencies/msvc-windows-x86/glew/include
-	Dependencies/msvc-windows-x86/GLFW/include
+	Dependencies/msvc-windows-x86/glfw-3.3.4.bin.WIN32/include
 	Dependencies/msvc-windows-x86/AL/include
 	Dependencies/spdlog/include
 )
 
 link_directories(
 	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/glew/lib/Release/Win32
-	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/GLFW/lib
+	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/glfw-3.3.4.bin.WIN32/lib-vc2019
 	${CMAKE_SOURCE_DIR}/Dependencies/msvc-windows-x86/AL/lib
 )
 
