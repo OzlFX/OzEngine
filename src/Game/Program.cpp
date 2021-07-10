@@ -26,12 +26,12 @@ void cProgram::Run()
 }
 */
 
-std::unique_ptr<Oz::cApplication> Oz::CreateApplication()
-{
-	return std::make_unique<cProgram>();
-}
-
 cProgram::~cProgram()
 {
 
+}
+
+std::unique_ptr<Oz::cApplication> Oz::CreateApplication()
+{
+	return std::make_unique<cProgram>();
 }

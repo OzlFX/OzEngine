@@ -9,7 +9,7 @@ class cProgram : public Oz::cApplication
 public:
 
 	cProgram();
-
+	
 	~cProgram();
 };
 

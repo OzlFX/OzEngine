@@ -5,12 +5,12 @@
 //Includes
 #include "Base.h"
 #include "Core.h"
+#include "OzEngine/Core/Window/Window.h"
+
+int main(int argc, char** argv);
 
 namespace Oz
 {
-	class cWindow;
-	class cOpenGLWindow;
-
 	class OZ_API cApplication
 	{
 	public:

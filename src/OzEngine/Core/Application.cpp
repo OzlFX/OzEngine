@@ -1,6 +1,7 @@
 #include "Application.h"
 #include <OzEngine/Utilities/Log.h>
-#include <OzEngine/Core/Window/OpenGLWindow.h>
+
+#include <GLFW/glfw3.h>
 
 namespace Oz
 {
@@ -10,13 +11,15 @@ namespace Oz
 	{
 		m_Running = true;
 		s_Self = this;
+
+		m_Window = Oz::cWindow::Create<Window>();
 	}
 
 	void cApplication::Run()
 	{
 		OZ_CORE_WARN("Initialised Log!");
 		OZ_INFO("Welcome!");
-		m_Window = Oz::cWindow::Create<Window>();
+		
 		while (m_Running)
 		{
 			m_Window->OnUpdate();

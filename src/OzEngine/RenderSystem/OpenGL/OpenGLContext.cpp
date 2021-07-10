@@ -25,7 +25,7 @@ namespace Oz
 			throw std::exception();
 		}
 
-		OZ_CORE_INFO(glGetString(GL_VERSION));
+		//OZ_CORE_INFO(glGetString(GL_VERSION));
 	}
 
 	void cOpenGLContext::SwapBuffers()

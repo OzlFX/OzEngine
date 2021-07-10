@@ -45,7 +45,7 @@ namespace Oz
 
 	void cOpenGLWindow::OnUpdate()
 	{
-		glfwSwapBuffers(m_Window); //Swap the window buffers after clearing has occured
+		m_Context->SwapBuffers(); //Swap the window buffers after clearing has occured
 		glfwPollEvents(); //Poll incoming events to the window
 	}
 
