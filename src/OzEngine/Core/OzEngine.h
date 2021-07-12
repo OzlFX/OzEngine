@@ -2,10 +2,10 @@
 #define _OZENGINE_H_
 
 /** META defined header to include all classes to be used in the client **/
+#include <OzEngine/Core/Base.h>
 #include <OzEngine/Core/Application.h>
-#include <OzEngine/Core/EntryPoint.h>
-
 #include <OzEngine/Utilities/Log.h>
+
 /*#include "GameObject.h"
 #include "Context.h"
 #include "Input.h"

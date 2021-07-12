@@ -22,7 +22,7 @@ namespace Oz
 		SetFullscreen(_Fullscreen);
 
 		//Create GLFW Window
-		m_Window = glfwCreateWindow(GetWidth(), GetHeight(), GetTitle().c_str(), m_Windowed, nullptr);
+		m_Window = glfwCreateWindow(m_Width, m_Height, m_Title.c_str(), nullptr, nullptr);
 
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -40,7 +40,7 @@ namespace Oz
 		if (IsFullscreen() == _Fullscreen)
 			return;
 
-		_Fullscreen ? m_Windowed = nullptr : m_Windowed = glfwGetPrimaryMonitor();
+		//_Fullscreen ? m_Windowed = nullptr : m_Windowed = glfwGetPrimaryMonitor();
 	}
 
 	void cOpenGLWindow::OnUpdate()

@@ -20,18 +20,21 @@ namespace Oz
 		Window& GetWindow() { return *m_Window; } //Get the window
 		static cApplication& GetApplication() { return *s_Self; } //Get current application instance
 
-		void Run(); //Run the application
-		void Close(); //Close the application
-
 		virtual ~cApplication();
 
 	private:
+		
+		void Run(); //Run the application
+		void Close(); //Close the application
+
 		//Vars for the application
 		bool m_Running; //Run check
 		bool m_Minimised = false; //Minimised check
 
 		std::unique_ptr<Window> m_Window; //Window
 		static cApplication* s_Self; //Instance of the application
+
+		friend int ::main(int argc, char** argv);
 	};
 
 	std::unique_ptr<cApplication> CreateApplication(); //Define in the Client

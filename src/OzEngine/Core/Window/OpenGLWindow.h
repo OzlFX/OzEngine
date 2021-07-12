@@ -39,7 +39,7 @@ namespace Oz
 	private:
 
 		GLFWwindow* m_Window;
-		GLFWmonitor* m_Windowed;
+		//GLFWmonitor* m_Windowed = nullptr;
 
 		std::unique_ptr<cGraphicsContext> m_Context;
 
