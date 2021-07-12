@@ -55,7 +55,6 @@ add_library(OzEngine SHARED
 set_target_properties( OzEngine
     PROPERTIES
     LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
-    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
 )
 
 target_link_libraries(OzEngine OpenAL32 glfw3 glew32)
@@ -71,3 +70,8 @@ add_executable(Game
 )
 
 target_link_libraries(Game OzEngine)
+
+set_target_properties( Game
+	PROPERTIES
+	RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin"
+)
